@@ -13,6 +13,7 @@ a {
 body {
   font-family: 'Roboto', sans-serif;
   color: #212121;
+  overflow-x: hidden;
 }
 
 .main-container {
@@ -29,6 +30,6 @@ body {
 
 @media screen and (min-width:1200px){
   .main-container{
-    width: 1200;
+    width: 1200px;
   }
 }

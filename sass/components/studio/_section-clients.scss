@@ -58,9 +58,24 @@
     margin-top: 30px;
   }
 }
-@media screen and (min-width:768px) and (max-width:1199px){
+@media screen and (min-width:768px){
   .section-clients{
     width: 768px;
     overflow: hidden;
   }
+}
+@media screen and (min-width:1200px){
+  .section-clients{
+    width: 1200px;
+    padding-top: 94px;
+    padding-bottom: 94px;
+    &__link {
+    width: 170px;
+    height: 90px;
+    }
+    &__title {
+    margin-bottom: 50px;
+    }
+  }
+  
 }

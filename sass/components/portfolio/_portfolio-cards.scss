@@ -1,6 +1,6 @@
 .section-portfolio {
-  margin-top: 94px;
-  margin-bottom: 64px;
+  margin-top: 60px;
+  margin-bottom: 60px;
 }
 
 .portfolio {
@@ -8,8 +8,7 @@
   flex-wrap: wrap;
   justify-content: center;
   &__card {
-    width: 370px;
-    margin-left: 30px;
+    width: 450px;
     margin-bottom: 30px;
     border: 1px solid #eeeeee;
     box-sizing: border-box;
@@ -36,9 +35,10 @@
     overflow: hidden;
   }
   &__image {
-    width: 369px;
+    width: 450px;
     height: 294px;
     overflow: hidden;
+    object-fit: contain;
   }
   &__overlay-text {
     position: absolute;
@@ -76,4 +76,42 @@
     margin-left: 24px;
     margin-right: 24px;
   }
+}
+
+@media screen and (min-width:768px){
+  .portfolio {
+    justify-content: space-between;
+  &__card {
+    width: 354px;
+    margin-left: 0px;
+  }
+  &__image {
+    width: 354px;
+    height: 294px;
+    overflow: hidden;
+  }
+}
+}
+
+@media screen and (min-width:1200px){
+  .section-portfolio {
+  margin-top: 94px;
+  margin-bottom: 64px;
+}
+.portfolio {
+  &__card {
+    width: 370px;
+    margin-left: 30px;
+  }
+  &__card--left {
+    margin-left: 0px;
+    margin-bottom: 30px;
+  }
+  &__image {
+    width: 370px;
+    height: 294px;
+    object-fit: cover;
+    overflow: hidden;
+  }
+}
 }
