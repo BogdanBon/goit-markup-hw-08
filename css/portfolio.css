@@ -539,6 +539,10 @@ img {
   color: var(--logo-special-color);
 }
 
+.menu-container__text--current {
+  color: var(--logo-special-color);
+}
+
 .menu-container__item {
   margin-bottom: 32px;
 }

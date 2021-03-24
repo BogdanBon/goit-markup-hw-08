@@ -539,6 +539,10 @@ img {
   color: var(--logo-special-color);
 }
 
+.menu-container__text--current {
+  color: var(--logo-special-color);
+}
+
 .menu-container__item {
   margin-bottom: 32px;
 }
@@ -1345,7 +1349,8 @@ img {
 
 @media screen and (min-width: 768px) {
   .section-team {
-    padding: 60px 15px;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
   .section-team__title {
     padding-top: 0;
@@ -1488,9 +1493,9 @@ img {
   .section-clients__list {
     margin-left: 0;
     margin-right: 0;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 

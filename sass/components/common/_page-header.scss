@@ -164,6 +164,9 @@
   &__text:focus{
   color: var(--logo-special-color);
   }
+  &__text--current{
+  color: var(--logo-special-color);
+  }
   &__item{
   margin-bottom: 32px;
   }
