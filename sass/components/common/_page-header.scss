@@ -1,5 +1,6 @@
 .page-header {
-  width: 480px;
+  position: relative;
+  // width: 480px;
   height: 60px;
   padding: 16px 0px;
   margin-left: auto;
@@ -72,7 +73,6 @@
     &__container{
       display: flex;
       justify-content: space-between;
-    overflow: hidden;
     }
     &__item--margin-studio {
     margin-left: 93px;}
@@ -129,5 +129,121 @@
     height: 4px;
     background-color: var(--logo-special-color);
     border-radius: 2px;
+  }
+}
+
+@media screen and (min-width:768px){
+.menu-container,
+.menu-toggle{
+  display: none;
+ }
+}
+
+.menu-container{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  padding-left: 40px;
+  z-index: 777;
+
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(-100%);
+  background-color:#fff;
+  &__text{
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.172;
+  letter-spacing: 0.02em;
+  color: #000;
+  }
+  &__text:hover,
+  &__text:focus{
+  color: var(--logo-special-color);
+  }
+  &__item{
+  margin-bottom: 32px;
+  }
+  &__social{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 64px;
+  }
+  &__phone-color{
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.172;
+  letter-spacing: 0.02em;
+  color: var(--logo-special-color);
+  }
+  &__mail-color{
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.172;
+  letter-spacing: 0.02em;
+  color: var(--special-grey-color);
+  }
+  &__contacts{
+    position: absolute;
+    left: 40px;
+    bottom: 48px;
+  }
+  &__social-text{
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.157;
+  letter-spacing: 0.02em;
+  color: var(--logo-special-color);
+  }
+}
+
+.menu-container.is-open{
+  transform: translateX(0);
+}
+
+.menu-toggle{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  min-height: 40px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  &:hover {
+    fill: var(--logo-special-color);
+  }
+}
+
+@media screen and (min-width:768px){
+  .menu-toggle{
+    display: none;
+  }
+}
+
+
+.menu-container--social-pointer {
+  position: relative;
+  margin-right: 20px;
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: -10px;
+    bottom: 0;
+    width: 1px;
+    height: 100%;
+    background-color: rgba(33,33,33,0.2)
   }
 }

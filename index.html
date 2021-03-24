@@ -31,6 +31,15 @@
   </head>
   <body>
     <header class="page-header">
+      <button
+        class="menu-toggle js-open-menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <svg width="40" height="40">
+          <use href="./images/icons.svg#icon-lines"></use>
+        </svg>
+      </button>
       <div class="page-header__container main-container">
         <nav>
           <ul class="page-header__nav">
@@ -81,7 +90,7 @@
     </header>
     <main>
       <div class="section-hero">
-        <section>
+        <section class="main-container">
           <h1 class="section-hero__title">
             Эффективные решения <br />
             для вашего бизнеса
@@ -147,7 +156,11 @@
                 <li class="product__item product__item--margin-none">
                   <a href="#">
                     <img
-                      src="./images/img1.jpg"
+                      srcset="
+                        ./images/product-img/product-desktop-app@1x.jpg 1x,
+                        ./images/product-img/product-desktop-app@2x.jpg 2x
+                      "
+                      src="./images/product-img/product-desktop-app@1x.jpg"
                       alt="image1"
                       width="370"
                       height="294"
@@ -159,7 +172,11 @@
                 <li class="product__item">
                   <a href="#">
                     <img
-                      src="./images/img2.jpg"
+                      srcset="
+                        ./images/product-img/product-mobile-app@1x.jpg 1x,
+                        ./images/product-img/product-mobile-app@2x.jpg 2x
+                      "
+                      src="./images/product-img/product-mobile-app@1x.jpg"
                       alt="image2"
                       width="370"
                       height="294"
@@ -171,7 +188,11 @@
                 <li class="product__item">
                   <a href="#">
                     <img
-                      src="./images/img3.jpg"
+                      srcset="
+                        ./images/product-img/product-design-solutions@1x.jpg 1x,
+                        ./images/product-img/product-design-solutions@2x.jpg 2x
+                      "
+                      src="./images/product-img/product-design-solutions@1x.jpg"
                       alt="image3"
                       width="370"
                       height="294"
@@ -186,11 +207,15 @@
         </section>
       </div>
       <div class="section-team">
-        <section>
+        <section class="main-container">
           <h2 class="section-team__title">Наша команда</h2>
           <ul class="section-team__list">
             <li class="section-team__item section-team__item--margin-none">
               <img
+                srcset="
+                  ./images/team-img/mobile-team-person-igor@1x.jpg 1x,
+                  ./images/team-img/mobile-team-person-igor@2x.jpg 2x
+                "
                 src="./images/team-img/mobile-team-person-igor@1x.jpg"
                 alt="product_designer"
                 class="section-team__img"
@@ -230,6 +255,10 @@
             </li>
             <li class="section-team__item">
               <img
+                srcset="
+                  ./images/team-img/mobile-team-person-olga@1x.jpg 1x,
+                  ./images/team-img/mobile-team-person-olga@2x.jpg 2x
+                "
                 src="./images/team-img/mobile-team-person-olga@1x.jpg"
                 alt="frontend_developer"
                 class="section-team__img"
@@ -269,6 +298,10 @@
             </li>
             <li class="section-team__item">
               <img
+                srcset="
+                  ./images/team-img/mobile-team-person-nikolay@1x.jpg 1x,
+                  ./images/team-img/mobile-team-person-nikolay@2x.jpg 2x
+                "
                 src="./images/team-img/mobile-team-person-nikolay@1x.jpg"
                 alt="marketing"
                 class="section-team__img"
@@ -308,6 +341,10 @@
             </li>
             <li class="section-team__item">
               <img
+                srcset="
+                  ./images/team-img/mobile-team-person-mihail@1x.jpg 1x,
+                  ./images/team-img/mobile-team-person-mihail@2x.jpg 2x
+                "
                 src="./images/team-img/mobile-team-person-mihail@1x.jpg"
                 alt="ui_designer"
                 class="section-team__img"
@@ -348,7 +385,7 @@
           </ul>
         </section>
       </div>
-      <div class="section-clients">
+      <div class="section-clients main-container">
         <section>
           <h3 class="section-clients__title">Постоянные клиенты</h3>
           <ul class="section-clients__list">
@@ -542,6 +579,76 @@
         </button>
       </div>
     </div>
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg width="40" height="40">
+          <use href="./images/icons.svg#icon-cross"></use>
+        </svg>
+      </button>
+      <nav>
+        <ul>
+          <li class="menu-container__item">
+            <a href="index.html" class="menu-container__text">Студия</a>
+          </li>
+          <li class="menu-container__item">
+            <a href="portfolio.html" class="menu-container__text">Портфолио</a>
+          </li>
+          <li>
+            <a href="#" class="menu-container__text">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="menu-container__contacts">
+        <ul>
+          <li class="menu-container__item">
+            <a href="tel:+380961111111" class="menu-container__phone-color">
+              +38 096 111 11 11</a
+            >
+          </li>
+          <li>
+            <a
+              href="mailto:info@devstudio.com"
+              class="menu-container__mail-color"
+            >
+              info@devstudio.com</a
+            >
+          </li>
+        </ul>
+        <ul class="menu-container__social">
+          <li class="menu-container--social-pointer">
+            <a
+              href="https://www.instagram.com"
+              class="menu-container__social-text"
+              >Instagram</a
+            >
+          </li>
+          <li class="menu-container--social-pointer">
+            <a href="https://twitter.com" class="menu-container__social-text"
+              >Twitter</a
+            >
+          </li>
+          <li class="menu-container--social-pointer">
+            <a
+              href="https://www.facebook.com"
+              class="menu-container__social-text"
+              >Facebook</a
+            >
+          </li>
+          <li>
+            <a href="https://linkedin.com" class="menu-container__social-text"
+              >Linkedin</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

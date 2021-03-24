@@ -1,5 +1,5 @@
 .page-footer {
-  width: 480px;
+  // width: 480px;
   height: 603px;
   padding-top: 60px;
   padding-bottom: 60px;
@@ -99,7 +99,7 @@
 }
 
 .page-footer-newsletter__input {
-  width: 450px;
+  min-width: 290px;
   height: 50px;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -123,6 +123,18 @@
     line-height: 1.25;
     color: var(--special-grey-color);
   }
+}
+
+@media screen and (min-width:480px){
+  .page-footer-newsletter__input {
+  min-width: 450px;
+}
+}
+
+@media screen and (min-width:1200px){
+  .page-footer-newsletter__input {
+  min-width: 358px;
+}
 }
 
 .page-footer-newsletter__btn {
@@ -150,7 +162,7 @@
 
 @media screen and (min-width:768px){
   .page-footer {
-  width: 768px;
+  // width: 768px;
   height: 463px;
   &__container{
     display: flex;

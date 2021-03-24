@@ -1,5 +1,5 @@
 .section-hero {
-  min-width: 480px;
+  // min-width: 480px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 118px;
@@ -37,18 +37,68 @@
   }
 }
 
-@media screen and(min-width:768px) and (max-width:1199px){
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .section-hero {
+    background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+     url('../images/hero-bcg-img/mobile-hero@2x.jpg');
+  }
+}
+
+@media screen and (min-width:480px) and (max-width:767px){
   .section-hero{
-    max-width: 768px;
-    margin-left: auto;
-    margin-right: auto;
     background-image: linear-gradient(
       to right,
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ), url('../images/hero-bcg-img/tablet-hero@1x.jpg');
   }
+    @media (min-device-pixel-ratio: 2),
+           (min-resolution: 192dpi),
+           (min-resolution: 2dppx){
+      .section-hero{
+           background-image: linear-gradient(
+           to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)), 
+          url('../images/hero-bcg-img/tablet-hero@2x.jpg');
+  }
+ }
 }
+
+@media screen and (min-width:768px){
+  .section-hero{
+    background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ), url('../images/hero-bcg-img/desktop-hero@1x.jpg');
+  }
+    @media (min-device-pixel-ratio: 2),
+           (min-resolution: 192dpi),
+           (min-resolution: 2dppx){
+      .section-hero{
+           background-image: linear-gradient(
+           to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)), 
+          url('../images/hero-bcg-img/desktop-hero@2x.jpg');
+  }
+ }
+}
+
+@media screen and (min-width:768px) and (max-width:1199px){
+  .section-hero{
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 
 @media screen and(min-width:1200px){
   .section-hero{
@@ -56,13 +106,7 @@
     height: 600px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: -1px;
     padding-top: 200px;
-    background-image: linear-gradient(
-      to right,
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ), url('../images/hero-bcg.jpg');
     &__title {
     font-weight: 900;
     font-size: 44px;

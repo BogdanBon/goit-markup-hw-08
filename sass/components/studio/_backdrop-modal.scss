@@ -26,8 +26,8 @@
   top: 50%;
   left: 50%;
   padding: 40px;
-  min-width: 528px;
-  min-height: 521px;
+  // min-width: 450px;
+  min-height: 609px;
   background-color: #fff;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -41,7 +41,8 @@
     margin-bottom: 12px;
     font-weight: 700;
     font-size: 20px;
-    line-height: 1.172;
+    line-height: 1.5;
+    text-align: center;
   }
   &__label {
     position: relative;
@@ -89,8 +90,8 @@
 }
 
 .modal-form__input {
-  width: 448px;
-  height: 40px;
+  // min-width: 370px;
+  min-height: 40px;
   padding-left: 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -98,7 +99,7 @@
 }
 
 .modal-form__text-comment {
-  min-width: 448px;
+  // min-width: 370px;
   min-height: 120px;
   padding: 12px 16px;
   resize: none;
@@ -115,22 +116,36 @@
 }
 
 .modal-form__politics-text {
-  margin-left: 7px;
+  font-size: 12px;
+  line-height: 1.172;
+
+  text-align: center;
   color: var(--special-grey-color);
+}
+
+@media screen and (min-width:480px){
+  .modal-form__politics-text {
+  margin-left: 7px;
+  }
 }
 
 .modal-form__label-politics {
   position: relative;
   margin: 20px auto 30px auto;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.172;
+  letter-spacing: 0.03em;
 }
 
 .modal-form__private-policy {
   margin-left: 5px;
+  font-size: 12px;
+  line-height: 1.172;
   color: var(--logo-special-color);
   text-decoration-line: underline;
 }
@@ -198,4 +213,29 @@
   &:hover {
     fill: var(--logo-special-color);
   }
+}
+
+@media screen and (min-width:480px){
+.modal {
+  min-width: 450px;
+ }
+ .modal-form__input {
+  min-width: 370px;
+ }
+ .modal-form__text-comment {
+  min-width: 370px;
+ }
+}
+
+@media screen and (min-width:1200px){
+  .modal {
+  min-width: 528px;
+  min-height: 581px;
+  }
+  .modal-form__politics-text {
+  font-size: 14px;
+}
+  .modal-form__private-policy {
+  font-size: 14px;
+ }
 }

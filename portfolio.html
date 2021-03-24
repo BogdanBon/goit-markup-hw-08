@@ -31,6 +31,16 @@
   </head>
   <body>
     <header class="page-header">
+      <button
+        class="menu-toggle js-open-menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <svg width="40" height="40">
+                  <use href="./images/icons.svg#icon-lines"></use>
+                </svg>
+        </svg>
+      </button>
       <div class="page-header__container main-container">
         <nav>
           <ul class="page-header__nav">
@@ -102,8 +112,12 @@
             <li class="portfolio__card portfolio__card--left">
               <div class="portfolio_thumb">
                 <img
+                  srcset="
+                    ./images/portfolio-img/portfolio-1@1x.jpg 1x,
+                    ./images/portfolio-img/portfolio-1@2x.jpg 2x
+                  "
+                  src="./images/portfolio-img/portfolio-1@1x.jpg"
                   class="portfolio__image"
-                  src="images/portfolio-img/portfolio-1@1x-2.jpg"
                   alt="Лаптоп с веб-сайтом"
                 />
                 <div>
@@ -120,8 +134,12 @@
             <li class="portfolio__card">
               <div class="portfolio_thumb">
                 <img
+                  srcset="
+                    ./images/portfolio-img/portfolio-2@1x.jpg 1x,
+                    ./images/portfolio-img/portfolio-2@2x.jpg 2x
+                  "
+                  src="./images/portfolio-img/portfolio-2@1x.jpg"
                   class="portfolio__image"
-                  src="images/portfolio-img/portfolio-2@1x-2.jpg"
                   alt="Постер с баскетболистами"
                 />
                 <div>
@@ -140,8 +158,12 @@
             <li class="portfolio__card">
               <div class="portfolio_thumb">
                 <img
+                  srcset="
+                    ./images/portfolio-img/portfolio-3@1x.jpg 1x,
+                    ./images/portfolio-img/portfolio-3@2x.jpg 2x
+                  "
+                  src="./images/portfolio-img/portfolio-3@1x.jpg"
                   class="portfolio__image"
-                  src="images/portfolio-img/portfolio-3@1x-2.jpg"
                   alt="Логотип риложения ресторана"
                 />
                 <div>
@@ -158,8 +180,12 @@
             <li class="portfolio__card portfolio__card--left">
               <div class="portfolio_thumb">
                 <img
+                  srcset="
+                    ./images/portfolio-img/portfolio-4@1x.jpg 1x,
+                    ./images/portfolio-img/portfolio-4@2x.jpg 2x
+                  "
+                  src="./images/portfolio-img/portfolio-4@1x.jpg"
                   class="portfolio__image"
-                  src="images/portfolio-img/portfolio-4@1x-2.jpg"
                   alt="Наушники"
                 />
                 <div>
@@ -176,8 +202,12 @@
             <li class="portfolio__card">
               <div class="portfolio_thumb">
                 <img
+                  srcset="
+                    ./images/portfolio-img/portfolio-5@1x.jpg 1x,
+                    ./images/portfolio-img/portfolio-5@2x.jpg 2x
+                  "
+                  src="./images/portfolio-img/portfolio-5@1x.jpg"
                   class="portfolio__image"
-                  src="images/portfolio-img/portfolio-5@1x-2.jpg"
                   alt="Коробки"
                 />
                 <div>
@@ -194,8 +224,12 @@
             <li class="portfolio__card">
               <div class="portfolio_thumb">
                 <img
+                  srcset="
+                    ./images/portfolio-img/portfolio-6@1x.jpg 1x,
+                    ./images/portfolio-img/portfolio-6@2x.jpg 2x
+                  "
+                  src="./images/portfolio-img/portfolio-6@1x.jpg"
                   class="portfolio__image"
-                  src="images/portfolio-img/portfolio-6@1x-2.jpg"
                   alt="Настольный ПК"
                 />
                 <div>
@@ -212,8 +246,12 @@
             <li class="portfolio__card portfolio__card--left">
               <div class="portfolio_thumb">
                 <img
+                  srcset="
+                    ./images/portfolio-img/portfolio-7@1x.jpg 1x,
+                    ./images/portfolio-img/portfolio-7@2x.jpg 2x
+                  "
+                  src="./images/portfolio-img/portfolio-7@1x.jpg"
                   class="portfolio__image"
-                  src="images/portfolio-img/portfolio-7@1x-2.jpg"
                   alt="Книга"
                 />
                 <div>
@@ -230,8 +268,12 @@
             <li class="portfolio__card">
               <div class="portfolio_thumb">
                 <img
+                  srcset="
+                    ./images/portfolio-img/portfolio-8@1x.jpg 1x,
+                    ./images/portfolio-img/portfolio-8@2x.jpg 2x
+                  "
+                  src="./images/portfolio-img/portfolio-8@1x.jpg"
                   class="portfolio__image"
-                  src="images/portfolio-img/portfolio-8@1x-2.jpg"
                   alt="Этикетка"
                 />
                 <div>
@@ -248,8 +290,12 @@
             <li class="portfolio__card">
               <div class="portfolio_thumb">
                 <img
+                  srcset="
+                    ./images/portfolio-img/portfolio-9@1x.jpg 1x,
+                    ./images/portfolio-img/portfolio-9@2x.jpg 2x
+                  "
+                  src="./images/portfolio-img/portfolio-9@1x.jpg"
                   class="portfolio__image"
-                  src="images/portfolio-img/portfolio-9@1x-2.jpg"
                   alt="Лаптоп"
                 />
                 <div>
@@ -351,5 +397,76 @@
         </div>
       </div>
     </footer>
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg width="40" height="40">
+                  <use href="./images/icons.svg#icon-cross"></use>
+                </svg>
+        </svg>
+      </button>
+      <nav>
+        <ul>
+          <li class="menu-container__item">
+            <a href="index.html" class="menu-container__text">Студия</a>
+          </li>
+          <li class="menu-container__item">
+            <a href="portfolio.html" class="menu-container__text">Портфолио</a>
+          </li>
+          <li>
+            <a href="#" class="menu-container__text">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="menu-container__contacts">
+        <ul>
+          <li class="menu-container__item">
+            <a href="tel:+380961111111" class="menu-container__phone-color">
+              +38 096 111 11 11</a
+            >
+          </li>
+          <li>
+            <a
+              href="mailto:info@devstudio.com"
+              class="menu-container__mail-color"
+            >
+              info@devstudio.com</a
+            >
+          </li>
+        </ul>
+        <ul class="menu-container__social">
+          <li class="menu-container--social-pointer">
+            <a
+              href="https://www.instagram.com"
+              class="menu-container__social-text"
+              >Instagram</a
+            >
+          </li>
+          <li class="menu-container--social-pointer">
+            <a href="https://twitter.com" class="menu-container__social-text"
+              >Twitter</a
+            >
+          </li>
+          <li class="menu-container--social-pointer">
+            <a
+              href="https://www.facebook.com"
+              class="menu-container__social-text"
+              >Facebook</a
+            >
+          </li>
+          <li>
+            <a href="https://linkedin.com" class="menu-container__social-text"
+              >Linkedin</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>

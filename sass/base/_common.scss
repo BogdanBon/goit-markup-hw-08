@@ -16,8 +16,14 @@ body {
   overflow-x: hidden;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .main-container {
-  width: 480px;
+  min-width: 320px;
   margin: 0 auto;
   padding: 0 15px;
 }
