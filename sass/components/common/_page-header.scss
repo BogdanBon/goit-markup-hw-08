@@ -172,10 +172,6 @@
   &__item {
     margin-bottom: 32px;
   }
-  &__contacts {
-    position: absolute;
-    top: 514px;
-  }
   &__social {
     display: flex;
     flex-wrap: wrap;
@@ -249,4 +245,9 @@
     height: 100%;
     background-color: rgba(33, 33, 33, 0.2);
   }
+}
+
+.menu-container__contacts {
+  position: absolute;
+  top: 514px;
 }

@@ -548,11 +548,6 @@ img {
   margin-bottom: 32px;
 }
 
-.menu-container__contacts {
-  position: absolute;
-  top: 514px;
-}
-
 .menu-container__social {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -639,6 +634,11 @@ img {
   width: 1px;
   height: 100%;
   background-color: rgba(33, 33, 33, 0.2);
+}
+
+.menu-container__contacts {
+  position: absolute;
+  top: 514px;
 }
 
 .page-footer {
